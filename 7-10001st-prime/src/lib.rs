@@ -1,4 +1,5 @@
 pub mod prime_getter;
+pub mod simpler_prime_getter;
 
 #[derive(Debug, Clone, PartialEq)]
 pub struct Primes {
