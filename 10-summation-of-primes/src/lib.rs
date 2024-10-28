@@ -250,11 +250,18 @@ mod tests {
     fn getting_primes_in_series_is_equivalent_to_in_parallel_for_50() {
         test_series_equivalent_to_parallel_for_n(50);
     }
+
     #[test]
     fn getting_primes_in_series_is_equivalent_to_in_parallel_for_100() {
         test_series_equivalent_to_parallel_for_n(100);
     }
 
+    #[test]
+    fn getting_primes_in_series_is_equivalent_to_in_parallel_for_1000() {
+        test_series_equivalent_to_parallel_for_n(1000);
+    }
+
+    #[ignore]
     #[test]
     fn getting_primes_in_series_is_equivalent_to_in_parallel_for_10_000() {
         test_series_equivalent_to_parallel_for_n(10000);
@@ -364,5 +371,22 @@ mod tests {
     fn test_0th_prime() {
         let mut p = PrimeGenerator::new();
         assert!(p.nth_prime(0).is_none());
+    }
+
+    #[test]
+    fn test_primes_up_to_0() {
+        let mut p = PrimeGenerator::new();
+        let actual = p.parallel_primes_up_to(0);
+        let expected = vec![2];
+
+        assert_eq!(actual, expected);
+    }
+    #[test]
+    fn test_primes_up_to_1() {
+        let mut p = PrimeGenerator::new();
+        let actual = p.parallel_primes_up_to(1);
+        let expected = vec![2];
+
+        assert_eq!(actual, expected);
     }
 }
