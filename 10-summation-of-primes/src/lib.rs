@@ -110,7 +110,7 @@ impl PrimeGenerator {
         let parallel_processing_threshold = 50;
 
         if n <= 2 {
-            return vec![2];
+            return vec![];
         } else if n < parallel_processing_threshold {
             return self.get_primes_below_n_in_series(n);
         }
@@ -118,11 +118,15 @@ impl PrimeGenerator {
         let small_primes = Self::generate_small_primes(n);
         let primes_in_parallel = Self::mark_larger_primes_parallel(n, small_primes.as_slice());
 
-        primes_in_parallel
+        let primes: Vec<u64> = primes_in_parallel
             .iter()
             .filter(|k| k < &&n)
             .copied()
-            .collect()
+            .collect::<Vec<u64>>();
+
+        primes.iter().for_each(|&p| self.add_prime(p));
+
+        primes
     }
 
     fn get_small_prime_limit(n: u64) -> u64 {
@@ -261,7 +265,7 @@ mod tests {
         test_series_equivalent_to_parallel_for_n(1000);
     }
 
-    #[ignore]
+    #[ignore] // This test is pretty slow and is probably already covered by above cases
     #[test]
     fn getting_primes_in_series_is_equivalent_to_in_parallel_for_10_000() {
         test_series_equivalent_to_parallel_for_n(10000);
@@ -377,7 +381,7 @@ mod tests {
     fn test_primes_up_to_0() {
         let mut p = PrimeGenerator::new();
         let actual = p.parallel_primes_up_to(0);
-        let expected = vec![2];
+        let expected = vec![];
 
         assert_eq!(actual, expected);
     }
@@ -385,8 +389,29 @@ mod tests {
     fn test_primes_up_to_1() {
         let mut p = PrimeGenerator::new();
         let actual = p.parallel_primes_up_to(1);
-        let expected = vec![2];
+        let expected = vec![];
 
+        assert_eq!(actual, expected);
+    }
+
+    /*     pub fn get_next_prime(&mut self) -> u64 {
+        match self.next() {
+            Some(p) => p,
+            None => self.next().expect(
+                "There is an infinite number of primes so this iterator should never stop...",
+            ),
+        }
+    } */
+    #[test]
+    fn test_get_next_prime() {
+        let mut p = PrimeGenerator::new();
+        let actual = p.get_next_prime();
+        let expected = 3;
+
+        assert_eq!(actual, expected);
+
+        let actual = p.get_next_prime();
+        let expected = 5;
         assert_eq!(actual, expected);
     }
 }
