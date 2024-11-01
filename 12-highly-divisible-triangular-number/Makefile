@@ -1,4 +1,3 @@
-
 coverage:
 	cargo llvm-cov clean
 	cargo llvm-cov --lcov --output-path lcov.info
