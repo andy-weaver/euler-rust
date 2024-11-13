@@ -1,9 +1,6 @@
-use highly_divisible_triangular_number::triangular_number_maker::TriangularNumberMaker;
-fn main() {
-    let mut t = TriangularNumberMaker::new();
+use highly_divisible_triangular_number::triangular_numbers::get_first_with_n_divisors;
 
-    (0..100).for_each(|_| {
-        t.next();
-    });
-    println!("Triangular Numbers: {:#?}", t.numbers);
+fn main() {
+    let result = get_first_with_n_divisors(500);
+    println!("Result: {}", result);
 }

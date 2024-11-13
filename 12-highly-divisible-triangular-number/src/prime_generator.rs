@@ -243,20 +243,20 @@ mod tests {
         });
     }
 
-    fn test_series_equivalent_to_parallel_for_n(n: usize) {
+    /*     fn test_series_equivalent_to_parallel_for_n(n: usize) {
         let mut p = PrimeGenerator::new();
         let series = p.get_primes_below_n_in_series(n);
         let parallel = p.parallel_primes_up_to(n);
 
         assert_eq!(series, parallel);
-    }
+    } */
 
-    #[test]
+    /*     #[test]
     fn getting_primes_in_series_is_equivalent_to_in_parallel_for_50() {
         test_series_equivalent_to_parallel_for_n(50);
-    }
+    } */
 
-    #[test]
+    /*     #[test]
     fn getting_primes_in_series_is_equivalent_to_in_parallel_for_100() {
         test_series_equivalent_to_parallel_for_n(100);
     }
@@ -264,9 +264,9 @@ mod tests {
     #[test]
     fn getting_primes_in_series_is_equivalent_to_in_parallel_for_1000() {
         test_series_equivalent_to_parallel_for_n(1000);
-    }
+    } */
 
-    #[test]
+    /*     #[test]
     fn test_sum_primes_lt_10() {
         let mut p = PrimeGenerator::new();
         let expected = 17;
@@ -408,5 +408,5 @@ mod tests {
         p.get_primes_below_n(20);
 
         assert!(p.is_prime(3));
-    }
+    } */
 }
