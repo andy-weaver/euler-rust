@@ -1,0 +1,115 @@
+.
+├── 1-multiples-of-3-or-5
+│   ├── Cargo.toml
+│   └── src
+│       ├── lib.rs
+│       └── main.rs
+├── 10-summation-of-primes
+│   ├── Cargo.toml
+│   ├── Makefile
+│   ├── err
+│   ├── lcov.info
+│   ├── result
+│   └── src
+│       ├── lib.rs
+│       └── main.rs
+├── 11-largest-product-in-a-grid
+│   ├── Cargo.toml
+│   ├── Makefile
+│   ├── lcov.info
+│   ├── result
+│   └── src
+│       ├── lib.rs
+│       └── main.rs
+├── 12-highly-divisible-triangular-number
+│   ├── Cargo.lock
+│   ├── Cargo.toml
+│   ├── Makefile
+│   ├── answer
+│   ├── lcov.info
+│   └── src
+│       ├── integer_factorizer.rs
+│       ├── lib.rs
+│       ├── main.rs
+│       ├── prime_generator.rs
+│       ├── triangular_number_maker.rs
+│       └── triangular_numbers.rs
+├── 13-large-sum
+│   ├── Cargo.lock
+│   ├── Cargo.toml
+│   ├── Makefile
+│   ├── answer
+│   └── src
+│       ├── lib.rs
+│       ├── main.rs
+│       └── vector.rs
+├── 2-even-fibonacci-numbers
+│   ├── Cargo.toml
+│   └── src
+│       └── main.rs
+├── 3-largest-prime-factor
+│   ├── Cargo.toml
+│   └── src
+│       └── main.rs
+├── 4-largest-palindrome-product
+│   ├── Cargo.toml
+│   └── src
+│       └── main.rs
+├── 5-smallest-multiple
+│   ├── Cargo.toml
+│   ├── answer
+│   └── src
+│       └── main.rs
+├── 6-sum-square-difference
+│   ├── Cargo.toml
+│   ├── answer
+│   └── src
+│       ├── lib.rs
+│       └── main.rs
+├── 7-10001st-prime
+│   ├── Cargo.toml
+│   ├── Makefile
+│   ├── lcov.info
+│   └── src
+│       ├── lib.rs
+│       ├── main.rs
+│       ├── prime_getter.rs
+│       └── simpler_prime_getter.rs
+├── 8-largest-product-in-a-series
+│   ├── Cargo.toml
+│   ├── Makefile
+│   ├── lcov.info
+│   ├── res
+│   └── src
+│       ├── lib.rs
+│       └── main.rs
+├── 9-special-pythagorean-triplet
+│   ├── Cargo.toml
+│   ├── Makefile
+│   ├── lcov.info
+│   ├── py
+│   │   ├── LICENSE.txt
+│   │   ├── README.md
+│   │   ├── main.py
+│   │   ├── pyproject.toml
+│   │   ├── requirements-dev.lock
+│   │   ├── requirements.lock
+│   │   └── src
+│   │       └── py
+│   │           └── __init__.py
+│   ├── result
+│   └── src
+│       ├── lib.rs
+│       ├── main.rs
+│       └── tests.rs
+├── Cargo.lock
+├── Cargo.toml
+├── LICENSE
+├── Makefile
+├── README.md
+├── lcov.info
+├── src
+│   └── main.rs
+└── tree
+
+30 directories, 82 files
