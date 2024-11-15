@@ -196,7 +196,7 @@ mod tests {
         ];
 
         let first_part = 123456789012 + 112233445566;
-        let second_part = ((345678901234 + 778899001122) / 10u64.pow(12)) as u64;
+        let second_part = (345678901234 + 778899001122) / 10u64.pow(12);
         let expected = (first_part + second_part) / 100;
 
         let actual = first_10_digits_of_sum(parts);
